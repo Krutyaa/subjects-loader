@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <include file="create/create-changeset-t_blacklists.xml" relativeToChangelogFile="true"/>
+    <include file="create/create-changeset-t_download_history.xml" relativeToChangelogFile="true"/>
+    <include file="create/create-changeset-t_normalization_guides.xml" relativeToChangelogFile="true"/>
+    <include file="create/create-changeset-t_search_scripts.xml" relativeToChangelogFile="true"/>
+    <include file="create/create-changeset-t_check_history.xml" relativeToChangelogFile="true"/>
+    <include file="create/create-changeset-t_blacklist_subjects.xml" relativeToChangelogFile="true"/>
+    <include file="create/create-changeset-t_exact_search_keys.xml" relativeToChangelogFile="true"/>
+    <include file="create/create-changeset-t_fuzzy_search_keys.xml" relativeToChangelogFile="true"/>
+
+    <include file="insert/insert-changeset-t_blacklists.xml" relativeToChangelogFile="true"/>
+    <include file="insert/insert-changeset-t_normalization_guides.xml" relativeToChangelogFile="true"/>
+    <include file="insert/insert-changeset-t_search_scripts.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

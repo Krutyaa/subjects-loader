@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="create-t_exact_search_keys" author="admin">
+        <createTable tableName="t_exact_search_keys">
+            <column name="id" type="bigserial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="subject_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="blacklist" type="text"/>
+            <column name="search_script_number" type="bigint"/>
+            <column name="key_value" type="text"/>
+            <column name="is_published" type="boolean"/>
+        </createTable>
+        <addForeignKeyConstraint
+                baseTableName="t_exact_search_keys"
+                baseColumnNames="subject_id"
+                constraintName="fk_exact_keys_subject"
+                referencedTableName="t_blacklist_subjects"
+                referencedColumnNames="id"
+                deferrable="false" initiallyDeferred="false"
+                onDelete="CASCADE"/>
+        <addForeignKeyConstraint
+                baseTableName="t_exact_search_keys"
+                baseColumnNames="search_script_number"
+                constraintName="fk_exact_keys_script"
+                referencedTableName="t_search_scripts"
+                referencedColumnNames="id"
+                deferrable="false" initiallyDeferred="false"/>
+    </changeSet>
+
+</databaseChangeLog>

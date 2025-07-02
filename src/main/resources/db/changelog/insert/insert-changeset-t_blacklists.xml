@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="insert-t_blacklists" author="admin">
+        <insert tableName="t_blacklists">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Признаки финансовой пирамиды"/>
+            <column name="is_turned" valueBoolean="true"/>
+        </insert>
+        <insert tableName="t_blacklists">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Признаки нелегального кредитора"/>
+            <column name="is_turned" valueBoolean="true"/>
+        </insert>
+        <insert tableName="t_blacklists">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="Признаки нелегального профессионального участника рынка ценных бумаг"/>
+            <column name="is_turned" valueBoolean="true"/>
+        </insert>
+        <insert tableName="t_blacklists">
+            <column name="id" valueNumeric="4"/>
+            <column name="name" value="Признаки нелегальной деятельности на страховом рынке"/>
+            <column name="is_turned" valueBoolean="true"/>
+        </insert>
+        <insert tableName="t_blacklists">
+            <column name="id" valueNumeric="5"/>
+            <column name="name" value="Признаки нелегального оператора инвестиционной платформы"/>
+            <column name="is_turned" valueBoolean="true"/>
+        </insert>
+        <insert tableName="t_blacklists">
+            <column name="id" valueNumeric="6"/>
+            <column name="name" value="Справочник экстремистов и террористов"/>
+            <column name="is_turned" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

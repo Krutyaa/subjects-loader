@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="insert-t_search_scripts" author="admin">
+        <insert tableName="t_search_scripts">
+            <column name="id" valueNumeric="1"/>
+            <column name="description" value="Наименование совпадает"/>
+            <column name="script_number" value="100"/>
+            <column name="percent" valueNumeric="50"/>
+        </insert>
+        <insert tableName="t_search_scripts">
+            <column name="id" valueNumeric="2"/>
+            <column name="description" value="Наименование + Дата Рождения совпадают"/>
+            <column name="script_number" value="101"/>
+            <column name="percent" valueNumeric="80"/>
+        </insert>
+        <insert tableName="t_search_scripts">
+            <column name="id" valueNumeric="3"/>
+            <column name="description" value="ИНН совпадает"/>
+            <column name="script_number" value="102"/>
+            <column name="percent" valueNumeric="90"/>
+        </insert>
+        <insert tableName="t_search_scripts">
+            <column name="id" valueNumeric="4"/>
+            <column name="description" value="Серия и номер паспорта совпадают"/>
+            <column name="script_number" value="103"/>
+            <column name="percent" valueNumeric="85"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

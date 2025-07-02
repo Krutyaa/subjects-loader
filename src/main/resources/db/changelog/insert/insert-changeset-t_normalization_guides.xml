@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="insert-t_normalization_guides" author="admin">
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="1"/>
+            <column name="normalization_operation" value="Допустимые символы (буквы и цифры)"/>
+            <column name="param1" value="[А-ЯA-Z0-9 ]+"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="2"/>
+            <column name="normalization_operation" value="Допустимые символы (цифры)"/>
+            <column name="param1" value="[0-9]+"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="3"/>
+            <column name="normalization_operation" value="Замены символов"/>
+            <column name="param1" value="Ё"/>
+            <column name="param2" value="Е"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="4"/>
+            <column name="normalization_operation" value="Замены символов"/>
+            <column name="param1" value="Й"/>
+            <column name="param2" value="И"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="5"/>
+            <column name="normalization_operation" value="Замены символов"/>
+            <column name="param1" value="Ъ"/>
+            <column name="param2" value="Ь"/>
+        </insert>
+
+        <!-- Удаляемые слова: 6 - 21 -->
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="6"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="INC"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="7"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="INCORPORATED"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="8"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="LIMITED LIABILITY COMPANY"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="9"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="LLC"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="10"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="LTD"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="11"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="АДВОКАТ"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="12"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="АКЦИОНЕРНОЕ ОБЩЕСТВО"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="13"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="АО"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="14"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="ЗАКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="15"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="ЗАО"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="16"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="17"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="ИП"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="18"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="ОАО"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="19"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="ОТКРЫТОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="20"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="ПАО"/>
+        </insert>
+        <insert tableName="t_normalization_guides">
+            <column name="id" valueNumeric="21"/>
+            <column name="normalization_operation" value="Удаляемые слова"/>
+            <column name="param1" value="ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
