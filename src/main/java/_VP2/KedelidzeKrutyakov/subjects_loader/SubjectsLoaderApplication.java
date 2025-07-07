@@ -16,7 +16,6 @@ public class SubjectsLoaderApplication {
 
 	@Scheduled(cron = "${job.cron-expression}")
 	void some() throws InterruptedException {
-		System.out.println("Checking if update is needed...");
 	}
 
 }

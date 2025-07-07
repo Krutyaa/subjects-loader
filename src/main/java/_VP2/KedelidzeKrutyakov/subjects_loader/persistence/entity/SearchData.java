@@ -2,11 +2,10 @@ package _VP2.KedelidzeKrutyakov.subjects_loader.persistence.entity;
 
 import lombok.Data;
 
-import java.util.List;
-
 @Data
-public class Theme {
+public class SearchData {
     private Long id;
-    private String signRus;
-    private String signEng;
+    private String dt;
+    private String nameOrg;
+    private String comment;
 }

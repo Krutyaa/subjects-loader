@@ -1,14 +1,18 @@
 package _VP2.KedelidzeKrutyakov.subjects_loader.persistence.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "t_blacklist_subjects")
 public class BlacklistSubject {
 
     @Id
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @ManyToOne
     private Download download;

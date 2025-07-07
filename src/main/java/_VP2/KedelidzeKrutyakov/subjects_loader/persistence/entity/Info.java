@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class Info {
-    private long id;
+    private Long id;
     private String dt;
     private String nameOrg;
     private String inn;

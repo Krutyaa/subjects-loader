@@ -5,8 +5,9 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class CbrResponse {
-    private List<Info> info;
-    private List<Theme> signs;
-    private List<Region> regions;
+public class SearchResponse {
+
+    private List<SearchData> data;
+
 }
+

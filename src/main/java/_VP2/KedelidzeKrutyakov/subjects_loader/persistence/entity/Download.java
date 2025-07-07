@@ -13,7 +13,7 @@ public class Download {
 
     @Id
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @Column(name = "blacklist")
     private String blacklist;
